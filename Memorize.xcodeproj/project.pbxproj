@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB2FB4B325B73FE100812451 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FB4B225B73FE100812451 /* CardView.swift */; };
+		DB2FB4BB25B7618E00812451 /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2FB4BA25B7618E00812451 /* MemoryGame.swift */; };
 		DB85F2D725B736B500EABCCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F2D625B736B500EABCCA /* AppDelegate.swift */; };
 		DB85F2D925B736B500EABCCA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F2D825B736B500EABCCA /* SceneDelegate.swift */; };
 		DB85F2DB25B736B500EABCCA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB85F2DA25B736B500EABCCA /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		DB2FB4B225B73FE100812451 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		DB2FB4BA25B7618E00812451 /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
 		DB85F2D325B736B500EABCCA /* Memorize.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Memorize.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB85F2D625B736B500EABCCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB85F2D825B736B500EABCCA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2FB4BF25B7619A00812451 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				DB2FB4BA25B7618E00812451 /* MemoryGame.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		DB85F2CA25B736B500EABCCA = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		DB85F2D525B736B500EABCCA /* Memorize */ = {
 			isa = PBXGroup;
 			children = (
+				DB2FB4BF25B7619A00812451 /* models */,
 				DB85F31125B736EC00EABCCA /* views */,
 				DB85F2D625B736B500EABCCA /* AppDelegate.swift */,
 				DB85F2D825B736B500EABCCA /* SceneDelegate.swift */,
@@ -280,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB2FB4BB25B7618E00812451 /* MemoryGame.swift in Sources */,
 				DB85F2D725B736B500EABCCA /* AppDelegate.swift in Sources */,
 				DB85F2DE25B736B500EABCCA /* Memorize.xcdatamodeld in Sources */,
 				DB85F2D925B736B500EABCCA /* SceneDelegate.swift in Sources */,
