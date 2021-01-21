@@ -25,7 +25,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         
         let game = EmojiMemoryGame()
-        let contentView = ContentView(viewModel: game).environment(\.managedObjectContext, context)
+        let contentView = EmojiMemoryGameView(viewModel: game).environment(\.managedObjectContext, context)
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
