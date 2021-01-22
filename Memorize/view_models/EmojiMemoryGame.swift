@@ -8,12 +8,12 @@
 import SwiftUI
 
 
-class EmojiMemoryGame {
+class EmojiMemoryGame: ObservableObject { //obserable object only works for classes
     //this could be named "game"
-    private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()  
+    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
     
     static func createMemoryGame() -> MemoryGame<String> {
-        var emojis = ["🦀", "🦜", "🕍", "🐄", "🐛", "🐡", "🦑", "🐈", "🐳", "🐪", "🐫", "🐘"]
+        let emojis = ["🦀", "🦜"] //"🕍", "🐄", "🐛", "🐡", "🦑", "🐈", "🐳", "🐪", "🐫", "🐘"]
         return MemoryGame<String>(numberOfPairsOfCards: emojis.count){pairIndex in return emojis[pairIndex]}
     }
     

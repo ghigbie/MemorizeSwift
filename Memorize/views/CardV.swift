@@ -9,25 +9,34 @@ import SwiftUI
 
 struct CardV: View {
     var card: MemoryGame<String>.Card
-    let rounding: CGFloat = 10.0
     
-    var body: some View {
+    var body: some View{
+        GeometryReader(content: {geometry in
         ZStack{
-            if card.inFaceUp {
-                RoundedRectangle(cornerRadius: rounding)
+            if card.isFaceUp {
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(Color.white)
-                RoundedRectangle(cornerRadius: rounding)
-                    .stroke(lineWidth: 3)
+                RoundedRectangle(cornerRadius: cornerRadius)
+                    .stroke(lineWidth: edgeLineWidth)
                     .foregroundColor(Color.blue)
-                Text(card.content).font(Font.largeTitle)
+                Text(card.content).font(Font.system(size: min(geometry.size.width, geometry.size.height) * fontScaleFactor))
            }else{
-                RoundedRectangle(cornerRadius: rounding)
+                RoundedRectangle(cornerRadius: cornerRadius)
                     .fill(Color.blue)
             }
         }//zstack
-        .frame(width: 100,  height:100) //make them a smaller size
-        
+       // .aspectRatio(0.75, contentMode: .fit)//make them a smaller size
+        .frame(width: 100, height: 125)
+        }) //geometry reader
     }
+    
+    // MARK: - Drawing Constants
+    
+    let cornerRadius: CGFloat = 10.0
+    let edgeLineWidth: CGFloat = 3
+    let fontScaleFactor: CGFloat = 0.75
+    
+    
 }
 
 //struct CardV_Previews: PreviewProvider {

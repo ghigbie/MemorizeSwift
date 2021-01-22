@@ -9,17 +9,16 @@ import SwiftUI
 
 
 struct EmojiMemoryGameView: View {
-    var viewModel: EmojiMemoryGame
+    @ObservedObject var viewModel: EmojiMemoryGame
     
     var body: some View {
-        HStack {
-            ForEach(viewModel.cards){ card in
+        Grid(viewModel.cards){ card in  //this grid is a combination of an hstack and a for each
                 CardV(card: card).onTapGesture(perform: {viewModel.choose(card: card)})
             }
         }
-            .padding()
+        .padding()
     }
-}
+
 
 struct EmojiMemoryGameView_Previews: PreviewProvider {
     static var previews: some View {
