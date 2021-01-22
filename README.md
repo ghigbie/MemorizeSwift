@@ -1,5 +1,4 @@
-# Memorize
+# Memorize Swift
 
-A simple matching game for iOS that uses SwiftUI.
-
+A memory game for iOS built with SwiftUI using MVVM paradigm
 
